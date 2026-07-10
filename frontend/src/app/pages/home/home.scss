@@ -1,0 +1,383 @@
+:host {
+  display: block;
+  background: var(--klmc-bg);
+  color: var(--klmc-text);
+}
+
+.container {
+  width: min(100% - 4rem, 1280px);
+  margin-inline: auto;
+}
+
+.narrow {
+  max-width: 1100px;
+}
+
+.hero-klmc {
+  min-height: 980px;
+  background:
+    linear-gradient(rgba(57, 65, 65, 0.48), rgba(57, 65, 65, 0.55)),
+    url('https://images.unsplash.com/photo-1584515933487-779824d29309?auto=format&fit=crop&w=1800&q=80')
+      center center / cover no-repeat;
+  color: white;
+}
+
+.hero-overlay {
+  min-height: 980px;
+  display: flex;
+  align-items: center;
+}
+
+.hero-content {
+  display: flex;
+  align-items: center;
+}
+
+.hero-text {
+  max-width: 760px;
+  padding-top: 10rem;
+  padding-bottom: 8rem;
+}
+
+.hero-text h1 {
+  font-size: clamp(4.6rem, 7vw, 7.4rem);
+  line-height: 0.95;
+  margin: 0 0 2rem;
+  color: white;
+  font-family: Georgia, 'Times New Roman', serif;
+  letter-spacing: -0.03em;
+}
+
+.hero-subtitle {
+  font-size: 2rem;
+  line-height: 1.4;
+  margin: 0 0 0.9rem;
+  color: rgba(255, 255, 255, 0.96);
+}
+
+.hero-doctor {
+  font-size: 1.05rem;
+  margin-bottom: 2.4rem;
+  color: rgba(255, 255, 255, 0.9);
+}
+
+.hero-support p {
+  font-size: 1.35rem;
+  margin: 0 0 1rem;
+}
+
+.hero-support ul {
+  list-style: disc;
+  padding-left: 1.7rem;
+  margin: 0;
+}
+
+.hero-support li {
+  font-size: 1.22rem;
+  line-height: 1.9;
+  color: rgba(255, 255, 255, 0.96);
+}
+
+.content-section {
+  padding: 9rem 0;
+  background: white;
+}
+
+.section-title {
+  font-size: clamp(3.8rem, 5.2vw, 6rem);
+  line-height: 1.04;
+  margin: 0 0 3rem;
+  color: var(--klmc-heading);
+  font-family: Georgia, 'Times New Roman', serif;
+  letter-spacing: -0.03em;
+}
+
+.section-title.center {
+  text-align: center;
+}
+
+.section-title.light {
+  color: white;
+}
+
+.section-block {
+  max-width: 920px;
+}
+
+.section-block h3 {
+  font-size: 2.15rem;
+  margin: 0 0 1.5rem;
+  color: var(--klmc-heading);
+  font-family: Georgia, 'Times New Roman', serif;
+}
+
+.section-block p,
+.section-block li {
+  font-size: 1.38rem;
+  line-height: 1.95;
+  color: var(--klmc-text);
+}
+
+.bullet-list {
+  margin: 0;
+  padding-left: 2rem;
+}
+
+.bullet-list li {
+  margin-bottom: 0.7rem;
+}
+
+.quote-line {
+  text-align: center;
+  margin-top: 4rem;
+  font-size: 2.2rem !important;
+  line-height: 1.6;
+  font-weight: 600;
+  color: var(--klmc-heading) !important;
+}
+
+.cta-wrap {
+  margin-top: 2.5rem;
+}
+
+.cta-wrap.center {
+  text-align: center;
+}
+
+.btn-klmc {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  padding: 1.2rem 3.2rem;
+  border-radius: 9999px;
+  background: var(--klmc-peach);
+  color: white;
+  text-decoration: none;
+  font-size: 1.12rem;
+  font-weight: 600;
+  transition: background 0.2s ease;
+}
+
+.btn-klmc:hover {
+  background: var(--klmc-peach-dark);
+}
+
+.two-col {
+  display: grid;
+  grid-template-columns: 1.15fr 0.85fr;
+  gap: 6rem;
+  align-items: start;
+}
+
+.cta-side {
+  display: flex;
+  justify-content: flex-end;
+  align-items: flex-start;
+  padding-top: 2rem;
+}
+
+.lead-text {
+  font-size: 1.7rem !important;
+  margin-top: 2.2rem;
+  color: var(--klmc-heading) !important;
+}
+
+.doctor-grid {
+  display: grid;
+  grid-template-columns: 1.1fr 0.9fr;
+  gap: 5rem;
+  align-items: center;
+}
+
+.doctor-image-wrap {
+  display: flex;
+  justify-content: center;
+}
+
+.doctor-image-placeholder {
+  width: 100%;
+  max-width: 580px;
+  aspect-ratio: 4 / 5;
+  background: #e9ddd4;
+  color: var(--klmc-muted);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 1.35rem;
+}
+
+.video-link {
+  margin-top: 1.5rem;
+  color: var(--klmc-peach) !important;
+}
+
+.pillars-section {
+  padding: 8rem 0 9rem;
+  background: var(--klmc-green);
+}
+
+.pillars-grid {
+  display: grid;
+  grid-template-columns: repeat(4, minmax(0, 1fr));
+  gap: 3rem 2.5rem;
+  margin-top: 4rem;
+}
+
+.pillar-card {
+  text-align: center;
+  color: white;
+}
+
+.pillar-image {
+  aspect-ratio: 1 / 1;
+  background: rgba(255, 255, 255, 0.14);
+  margin-bottom: 1.2rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.pillar-card h3 {
+  color: white;
+  font-size: 1.9rem;
+  line-height: 1.2;
+  font-family: Georgia, 'Times New Roman', serif;
+}
+
+.reviews-section {
+  background: white;
+}
+
+.review-card {
+  max-width: 540px;
+  margin: 0 auto;
+  padding: 2.2rem 2rem;
+  border-radius: 1.2rem;
+  background: #fff;
+  box-shadow: 0 14px 36px rgba(0, 0, 0, 0.08);
+  text-align: center;
+}
+
+.review-brand {
+  font-weight: 700;
+  color: var(--klmc-heading);
+}
+
+.review-rating {
+  color: #b68c1b;
+  font-weight: 700;
+}
+
+.review-text {
+  margin: 1.2rem 0;
+  font-size: 1.15rem;
+}
+
+.review-author {
+  color: var(--klmc-muted);
+}
+
+.footer-logos {
+  padding: 5rem 0 6rem;
+  background: white;
+}
+
+.footer-logos-grid {
+  display: grid;
+  grid-template-columns: 1.2fr 1fr 1fr 1fr;
+  gap: 2.5rem;
+  align-items: center;
+}
+
+.footer-contact h3 {
+  margin: 0 0 1rem;
+  font-size: 2rem;
+  font-family: Georgia, 'Times New Roman', serif;
+  color: var(--klmc-heading);
+}
+
+.footer-contact a {
+  color: var(--klmc-peach);
+  text-decoration: underline;
+}
+
+.socials {
+  display: flex;
+  gap: 1rem;
+  flex-wrap: wrap;
+  margin-top: 1.5rem;
+  color: var(--klmc-heading);
+}
+
+.logo-box {
+  height: 130px;
+  border: 1px solid var(--klmc-border);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: var(--klmc-muted);
+  background: #fff;
+}
+
+@media (max-width: 1100px) {
+  .two-col,
+  .doctor-grid,
+  .footer-logos-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .cta-side {
+    justify-content: flex-start;
+    padding-top: 0;
+  }
+
+  .pillars-grid {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+}
+
+@media (max-width: 768px) {
+  .container {
+    width: min(100% - 2rem, 1280px);
+  }
+
+  .hero-klmc,
+  .hero-overlay {
+    min-height: auto;
+  }
+
+  .hero-text {
+    padding-top: 5rem;
+    padding-bottom: 5rem;
+  }
+
+  .hero-text h1 {
+    font-size: 3.7rem;
+  }
+
+  .hero-subtitle {
+    font-size: 1.35rem;
+  }
+
+  .section-title {
+    font-size: 3rem;
+  }
+
+  .section-block p,
+  .section-block li {
+    font-size: 1.08rem;
+    line-height: 1.8;
+  }
+
+  .section-block h3 {
+    font-size: 1.5rem;
+  }
+
+  .quote-line {
+    font-size: 1.5rem !important;
+  }
+
+  .pillars-grid {
+    grid-template-columns: 1fr;
+  }
+}

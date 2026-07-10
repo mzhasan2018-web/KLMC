@@ -1,0 +1,65 @@
+@use 'tailwindcss';
+@use '@angular/material' as mat;
+
+// Include theming for Angular Material with `mat.theme()`.
+// This Sass mixin will define CSS variables that are used for styling Angular Material
+// components according to the Material 3 design spec.
+// Learn more about theming and how to use it for your application's
+// custom components at https://material.angular.dev/guide/theming
+
+html {
+  height: 100%;
+  @include mat.theme(
+    (
+      color: (
+        primary: mat.$azure-palette,
+        tertiary: mat.$blue-palette,
+      ),
+      typography: Roboto,
+      density: 0,
+    )
+  );
+}
+
+body {
+  color-scheme: light;
+  background-color: var(--mat-sys-surface);
+  color: var(--mat-sys-on-surface);
+  font: var(--mat-sys-body-medium);
+  margin: 0;
+  height: 100%;
+}
+
+:root {
+  --color-primary: #2f6f62;
+  --color-primary-dark: #244f46;
+  --color-secondary: #1f3c88;
+  --color-accent: #c7a54b;
+  --color-bg: #f8fbfa;
+  --color-surface: #ffffff;
+  --color-text: #1f2937;
+  --color-muted: #6b7280;
+  --color-border: #e5e7eb;
+}
+
+html,
+body {
+  margin: 0;
+  padding: 0;
+  font-family: Arial, Helvetica, sans-serif;
+  color: var(--color-text);
+  background: var(--color-bg);
+}
+
+:root {
+  --klmc-green: #526463;
+  --klmc-green-dark: #445453;
+  --klmc-peach: #d79778;
+  --klmc-peach-dark: #c98667;
+  --klmc-text: #394545;
+  --klmc-heading: #435050;
+  --klmc-bg: #fbfaf8;
+  --klmc-surface: #ffffff;
+  --klmc-border: #ebe5df;
+  --klmc-muted: #6d7676;
+}

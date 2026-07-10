@@ -1,0 +1,95 @@
+<section class="calculator-card">
+  <div *ngIf="!showResults">
+    <div class="mb-6">
+      <p class="eyebrow">Lifestyle progress estimator</p>
+      <h3>See what your structured health journey could look like</h3>
+      <p class="intro">
+        Enter your details to view a sample 6-month progress pathway for lifestyle management support.
+      </p>
+    </div>
+
+    <form [formGroup]="calculatorForm" class="grid gap-4" (ngSubmit)="calculate()">
+      <div class="grid grid-cols-1 gap-4 md:grid-cols-2">
+        <label class="field">
+          <span>Height (cm)</span>
+          <input type="number" formControlName="heightCm" />
+        </label>
+
+        <label class="field">
+          <span>Weight (kg)</span>
+          <input type="number" formControlName="weightKg" />
+        </label>
+      </div>
+
+      <label class="field">
+        <span>Primary goal</span>
+        <select formControlName="goal">
+          <option value="weight-management">Weight management</option>
+          <option value="energy-metabolic-health">Energy & metabolic health</option>
+          <option value="menopause-support">Menopause support</option>
+          <option value="lifestyle-reset">Lifestyle reset</option>
+        </select>
+      </label>
+
+      <label class="field">
+        <span>Support plan</span>
+        <select formControlName="supportPlan">
+          <option value="consultation">Consultation only</option>
+          <option value="structured-follow-up">Consultation + structured follow-up</option>
+        </select>
+      </label>
+
+      <button type="submit" class="calc-btn">
+        Calculate my progress
+      </button>
+    </form>
+  </div>
+
+  <div *ngIf="showResults">
+    <div class="result-header">
+      <div>
+        <p class="eyebrow">Your sample progress view</p>
+        <h3>Your structured journey at a glance</h3>
+      </div>
+
+      <button type="button" class="edit-btn" (click)="editInputs()">
+        Edit details
+      </button>
+    </div>
+
+    <div class="result-grid">
+      <div class="stat highlight">
+        <span class="label">Potential progress</span>
+        <strong>{{ result.estimatedWeightChangeKg }} kg</strong>
+      </div>
+
+      <div class="stat">
+        <span class="label">Estimated change</span>
+        <strong>-{{ result.estimatedWeightChangePercent }}%</strong>
+      </div>
+
+      <div class="stat">
+        <span class="label">Estimated 6-month weight</span>
+        <strong>{{ result.endWeight }} kg</strong>
+      </div>
+    </div>
+
+    <div class="chart-panel">
+      <app-progress-chart [data]="chartData"></app-progress-chart>
+    </div>
+
+    <div class="result-actions">
+      <a href="#" class="primary-result-btn">Book consultation</a>
+      <p class="result-caption">
+        Start with a structured GP-led consultation and build a plan around your goals.
+      </p>
+    </div>
+
+    <div class="footnote">
+      <p>{{ result.focusMessage }}</p>
+      <p class="muted">
+        This is a sample lifestyle progress illustration, not a medical guarantee.
+      </p>
+    </div>
+  </div>
+</section>

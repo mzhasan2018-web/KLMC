@@ -1,0 +1,61 @@
+<section class="mx-auto max-w-4xl px-6 py-16">
+  <div class="mb-10">
+    <h1 class="text-4xl font-bold text-slate-900">Contact Us</h1>
+    <p class="mt-4 text-slate-600">
+      Send us an enquiry and we’ll get back to you as soon as possible.
+    </p>
+  </div>
+
+  <div class="rounded-3xl border border-slate-200 bg-white p-8 shadow-sm">
+    <form [formGroup]="contactForm" (ngSubmit)="submit()" class="grid gap-6">
+      <mat-form-field appearance="outline" class="w-full">
+        <mat-label>Full Name</mat-label>
+        <input matInput formControlName="fullName" />
+        <mat-error *ngIf="contactForm.controls['fullName'].hasError('required')">
+          Full name is required
+        </mat-error>
+      </mat-form-field>
+
+      <mat-form-field appearance="outline" class="w-full">
+        <mat-label>Email</mat-label>
+        <input matInput formControlName="email" />
+        <mat-error *ngIf="contactForm.controls['email'].hasError('required')">
+          Email is required
+        </mat-error>
+        <mat-error *ngIf="contactForm.controls['email'].hasError('email')">
+          Enter a valid email
+        </mat-error>
+      </mat-form-field>
+
+      <mat-form-field appearance="outline" class="w-full">
+        <mat-label>Phone</mat-label>
+        <input matInput formControlName="phone" />
+      </mat-form-field>
+
+      <mat-form-field appearance="outline" class="w-full">
+        <mat-label>Message</mat-label>
+        <textarea matInput rows="6" formControlName="message"></textarea>
+        <mat-error *ngIf="contactForm.controls['message'].hasError('required')">
+          Message is required
+        </mat-error>
+        <mat-error *ngIf="contactForm.controls['message'].hasError('minlength')">
+          Message must be at least 10 characters
+        </mat-error>
+      </mat-form-field>
+
+      <div class="flex items-center gap-4">
+        <button mat-flat-button type="submit" [disabled]="submitting">
+          {{ submitting ? 'Sending...' : 'Send Enquiry' }}
+        </button>
+      </div>
+
+      <p *ngIf="successMessage" class="text-green-700 font-medium">
+        {{ successMessage }}
+      </p>
+
+      <p *ngIf="errorMessage" class="text-red-600 font-medium">
+        {{ errorMessage }}
+      </p>
+    </form>
+  </div>
+</section>

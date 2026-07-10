@@ -1,0 +1,98 @@
+.klmc-header {
+  background: #ffffff;
+  border-bottom: 1px solid rgba(67, 80, 80, 0.08);
+  box-shadow: 0 10px 24px rgba(0, 0, 0, 0.04);
+  position: sticky;
+  top: 0;
+  z-index: 50;
+}
+
+.header-inner {
+  width: min(100% - 3rem, 1380px);
+  margin-inline: auto;
+  min-height: 104px;
+  display: grid;
+  grid-template-columns: 220px 1fr 260px;
+  align-items: center;
+  gap: 2rem;
+}
+
+.logo-wrap {
+  text-decoration: none;
+}
+
+.logo-box {
+  font-size: 2.5rem;
+  font-weight: 700;
+  color: var(--klmc-heading);
+  font-family: Georgia, 'Times New Roman', serif;
+  letter-spacing: 0.03em;
+}
+
+.main-nav {
+  display: flex;
+  justify-content: center;
+  gap: 2.5rem;
+}
+
+.main-nav a {
+  text-decoration: none;
+  color: var(--klmc-text);
+  font-size: 1.05rem;
+  position: relative;
+}
+
+.main-nav a.active::after,
+.main-nav a:hover::after {
+  content: '';
+  position: absolute;
+  left: 0;
+  bottom: -0.45rem;
+  width: 100%;
+  height: 1px;
+  background: var(--klmc-text);
+}
+
+.header-actions {
+  display: flex;
+  justify-content: flex-end;
+}
+
+.book-btn {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  padding: 1rem 1.8rem;
+  border-radius: 9999px;
+  background: var(--klmc-peach);
+  color: white;
+  text-decoration: none;
+  font-size: 0.98rem;
+  font-weight: 600;
+  letter-spacing: 0.02em;
+  white-space: nowrap;
+}
+
+.book-btn:hover {
+  background: var(--klmc-peach-dark);
+}
+
+@media (max-width: 980px) {
+  .header-inner {
+    grid-template-columns: 1fr;
+    padding: 1rem 0;
+    gap: 1rem;
+    min-height: auto;
+  }
+
+  .logo-box,
+  .header-actions,
+  .main-nav {
+    justify-self: center;
+  }
+
+  .main-nav {
+    flex-wrap: wrap;
+    gap: 1.2rem;
+  }
+}

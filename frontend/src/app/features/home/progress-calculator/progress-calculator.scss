@@ -1,0 +1,42 @@
+.result-header {
+  display: flex;
+  align-items: flex-start;
+  justify-content: space-between;
+  gap: 1rem;
+  margin-bottom: 1rem;
+}
+
+.edit-btn {
+  border: 1px solid #d9cfee;
+  background: white;
+  color: #5a3d89;
+  border-radius: 9999px;
+  padding: 0.7rem 1rem;
+  font-weight: 600;
+  cursor: pointer;
+}
+
+.result-actions {
+  margin-top: 1rem;
+  display: flex;
+  flex-direction: column;
+  gap: 0.75rem;
+}
+
+.primary-result-btn {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: fit-content;
+  padding: 0.95rem 1.35rem;
+  border-radius: 9999px;
+  text-decoration: none;
+  color: white;
+  font-weight: 700;
+  background: linear-gradient(135deg, #7a35ff, #9d68ff);
+}
+
+.result-caption {
+  color: #5f5575;
+  margin: 0;
+}
