@@ -1,0 +1,60 @@
+.topbar{
+
+    background:#526463;
+    color:white;
+    font-size:.9rem;
+
+}
+
+.container{
+
+    max-width:1400px;
+    margin:auto;
+
+    display:flex;
+    justify-content:space-between;
+    align-items:center;
+
+    padding:.8rem 2rem;
+
+}
+
+.left{
+
+    display:flex;
+    align-items:center;
+    gap:18px;
+
+}
+
+.left a{
+
+    color:white;
+    text-decoration:none;
+
+}
+
+.divider{
+
+    width:1px;
+    height:16px;
+    background:rgba(255,255,255,.3);
+
+}
+
+.right{
+
+    opacity:.9;
+
+}
+
+@media(max-width:900px){
+
+.container{
+
+flex-direction:column;
+gap:8px;
+
+}
+
+}

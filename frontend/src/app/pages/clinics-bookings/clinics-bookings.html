@@ -1,0 +1,40 @@
+<section class="content-section" style="padding-bottom: 4rem;">
+  <div class="container narrow">
+    <h1 class="section-title center">Clinics &amp; Bookings</h1>
+    <div class="section-block" style="margin-inline: auto; text-align: center;">
+      <p>
+        Choose the clinic location that works best for you. All appointments
+        are GP-led and follow the same structured approach to weight,
+        metabolic health and lifestyle-related concerns.
+      </p>
+    </div>
+  </div>
+</section>
+
+<section class="content-section" style="padding-top: 0;">
+  <div class="container">
+    <div class="clinics-grid">
+      @for (clinic of clinics; track clinic.name) {
+        <app-clinic-card [clinic]="clinic"></app-clinic-card>
+      }
+
+      <article class="clinic-card flexible-card">
+        <h3>Future Clinic Locations</h3>
+        <p>
+          Flexible outreach clinics at hospitals, GP practices or community
+          venues are being explored as demand grows across Kerry and beyond
+          &mdash; including collaborations with other practices.
+        </p>
+        <a class="btn-klmc secondary" routerLink="/contact">Interested in a clinic near you?</a>
+      </article>
+    </div>
+  </div>
+</section>
+
+<section class="content-section" style="padding-top: 0;">
+  <div class="container narrow">
+    <div class="cta-wrap center">
+      <a class="btn-klmc" routerLink="/contact">Book a free 10-minute call</a>
+    </div>
+  </div>
+</section>

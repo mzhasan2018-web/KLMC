@@ -3,7 +3,8 @@ using KLMC.Api.Models;
 using Microsoft.AspNetCore.Mvc;
 
 namespace KLMC.Api.Controllers
-{
+{   
+
     [ApiController]
     [Route("api/[controller]")]
     public class ContactController : ControllerBase

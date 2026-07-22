@@ -1,0 +1,81 @@
+.modal-backdrop {
+  position: fixed;
+  inset: 0;
+  background: rgba(57, 65, 65, 0.55);
+  z-index: 100;
+}
+
+.modal-panel {
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: min(90%, 480px);
+  max-height: 90vh;
+  overflow-y: auto;
+  background: var(--klmc-surface);
+  border-radius: 1.2rem;
+  padding: 2.5rem;
+  z-index: 101;
+  box-shadow: 0 24px 60px rgba(0, 0, 0, 0.25);
+}
+
+.modal-close {
+  position: absolute;
+  top: 1rem;
+  right: 1.25rem;
+  background: none;
+  border: none;
+  font-size: 1.8rem;
+  line-height: 1;
+  color: var(--klmc-muted);
+  cursor: pointer;
+}
+
+.modal-panel h2 {
+  margin: 0 0 0.75rem;
+  font-family: Georgia, 'Times New Roman', serif;
+  color: var(--klmc-heading);
+  font-size: 1.9rem;
+}
+
+.modal-subtitle {
+  margin: 0 0 1.5rem;
+  color: var(--klmc-text);
+}
+
+.modal-form {
+  display: flex;
+  flex-direction: column;
+  gap: 1.1rem;
+}
+
+.modal-form label {
+  display: flex;
+  flex-direction: column;
+  gap: 0.4rem;
+  font-size: 0.95rem;
+  color: var(--klmc-heading);
+  font-weight: 600;
+}
+
+.modal-form input,
+.modal-form select,
+.modal-form textarea {
+  font: inherit;
+  padding: 0.7rem 0.9rem;
+  border-radius: 0.6rem;
+  border: 1px solid var(--klmc-border);
+  background: white;
+  color: var(--klmc-text);
+}
+
+.modal-form button {
+  margin-top: 0.5rem;
+}
+
+@media (max-width: 560px) {
+  .modal-panel {
+    padding: 2rem 1.5rem;
+  }
+}

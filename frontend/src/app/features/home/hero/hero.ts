@@ -1,10 +1,9 @@
 import { Component } from '@angular/core';
-import { MatButtonModule } from '@angular/material/button';
 
 @Component({
   selector: 'app-hero',
   standalone: true,
-  imports: [MatButtonModule],
+  imports: [],
   templateUrl: './hero.html',
   styleUrl: './hero.scss'
 })

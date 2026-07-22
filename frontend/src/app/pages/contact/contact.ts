@@ -1,10 +1,11 @@
 import { Component } from '@angular/core';
 import { CommonModule } from '@angular/common';
+import { HttpErrorResponse } from '@angular/common/http';
 import { FormBuilder, FormGroup, ReactiveFormsModule, Validators } from '@angular/forms';
 import { MatButtonModule } from '@angular/material/button';
 import { MatFormFieldModule } from '@angular/material/form-field';
 import { MatInputModule } from '@angular/material/input';
-import { ApiService } from '../../services/api';
+import { ApiService, ContactResponse } from '../../core/services/api';
 
 @Component({
   selector: 'app-contact',
@@ -49,12 +50,12 @@ export class ContactComponent {
     this.submitting = true;
 
     this.apiService.submitContact(this.contactForm.getRawValue()).subscribe({
-      next: (response) => {
+      next: (response: ContactResponse) => {
         this.successMessage = response.message;
         this.submitting = false;
         this.contactForm.reset();
       },
-      error: (error) => {
+      error: (error: HttpErrorResponse) => {
         this.errorMessage = error?.error?.message || 'Something went wrong. Please try again.';
         this.submitting = false;
       }

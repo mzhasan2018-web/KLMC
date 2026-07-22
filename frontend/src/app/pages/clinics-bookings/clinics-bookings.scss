@@ -1,0 +1,22 @@
+:host {
+  display: block;
+  background: var(--klmc-bg);
+  color: var(--klmc-text);
+}
+
+.clinics-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+  gap: 2.5rem;
+  align-items: stretch;
+}
+
+.flexible-card {
+  justify-content: space-between;
+}
+
+.flexible-card p {
+  color: var(--klmc-text);
+  font-size: 1.05rem;
+  line-height: 1.7;
+}

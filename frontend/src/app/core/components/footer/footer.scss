@@ -1,0 +1,39 @@
+.footer{
+
+background:#2d3d3d;
+
+color:white;
+
+padding:80px 0;
+
+}
+
+.footer-grid{
+
+display:grid;
+
+grid-template-columns:2fr 1fr 1fr;
+
+gap:50px;
+
+}
+
+.footer a{
+
+display:block;
+
+margin:12px 0;
+
+color:white;
+
+text-decoration:none;
+
+}
+
+.footer h3,
+
+.footer h4{
+
+margin-bottom:20px;
+
+}

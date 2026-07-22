@@ -1,14 +1,14 @@
 @use 'tailwindcss';
 @use '@angular/material' as mat;
 
-// Include theming for Angular Material with `mat.theme()`.
+// Include theming for Angular Material with mat.theme().
 // This Sass mixin will define CSS variables that are used for styling Angular Material
 // components according to the Material 3 design spec.
 // Learn more about theming and how to use it for your application's
 // custom components at https://material.angular.dev/guide/theming
-
 html {
   height: 100%;
+
   @include mat.theme(
     (
       color: (
@@ -42,8 +42,7 @@ body {
   --color-border: #e5e7eb;
 }
 
-html,
-body {
+html, body {
   margin: 0;
   padding: 0;
   font-family: Arial, Helvetica, sans-serif;
@@ -62,4 +61,202 @@ body {
   --klmc-surface: #ffffff;
   --klmc-border: #ebe5df;
   --klmc-muted: #6d7676;
+}
+
+/* ---------------------------------------------------------------- */
+/* Shared page-section classes — used across Home, About, and any    */
+/* future page (Services, Clinics & Bookings, etc). Keep these here  */
+/* instead of duplicating per-component so the site stays consistent */
+/* while pages are built out.                                       */
+/* ---------------------------------------------------------------- */
+
+.container {
+  width: min(100% - 4rem, 1280px);
+  margin-inline: auto;
+}
+
+.narrow {
+  max-width: 1100px;
+}
+
+.content-section {
+  padding: 9rem 0;
+  background: white;
+}
+
+.section-title {
+  font-size: clamp(3.8rem, 5.2vw, 6rem);
+  line-height: 1.04;
+  margin: 0 0 3rem;
+  color: var(--klmc-heading);
+  font-family: Georgia, 'Times New Roman', serif;
+  letter-spacing: -0.03em;
+}
+
+.section-title.center {
+  text-align: center;
+}
+
+.section-title.light {
+  color: white;
+}
+
+.section-block {
+  max-width: 920px;
+}
+
+.section-block h3 {
+  font-size: 2.15rem;
+  margin: 0 0 1.5rem;
+  color: var(--klmc-heading);
+  font-family: Georgia, 'Times New Roman', serif;
+}
+
+.section-block p,
+.section-block li {
+  font-size: 1.38rem;
+  line-height: 1.95;
+  color: var(--klmc-text);
+}
+
+.bullet-list {
+  margin: 0;
+  padding-left: 2rem;
+}
+
+.bullet-list li {
+  margin-bottom: 0.7rem;
+}
+
+.bullet-list.large li {
+  font-size: 1.45rem;
+}
+
+.quote-line {
+  text-align: center;
+  margin-top: 4rem;
+  font-size: 2.2rem;
+  line-height: 1.6;
+  font-weight: 600;
+  color: var(--klmc-heading);
+}
+
+.cta-wrap {
+  margin-top: 2.5rem;
+}
+
+.cta-wrap.center {
+  text-align: center;
+}
+
+.btn-klmc {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  padding: 1.2rem 3.2rem;
+  border-radius: 9999px;
+  background: var(--klmc-peach);
+  color: white;
+  text-decoration: none;
+  font-size: 1.12rem;
+  font-weight: 600;
+  border: none;
+  cursor: pointer;
+  transition: background 0.2s ease, color 0.2s ease, border-color 0.2s ease;
+}
+
+.btn-klmc:hover {
+  background: var(--klmc-peach-dark);
+}
+
+.btn-klmc.secondary {
+  background: transparent;
+  color: var(--klmc-heading);
+  border: 2px solid var(--klmc-heading);
+  padding: 1.15rem 3.15rem;
+}
+
+.btn-klmc.secondary:hover {
+  background: var(--klmc-heading);
+  color: white;
+}
+
+.two-col {
+  display: grid;
+  grid-template-columns: 1.15fr 0.85fr;
+  gap: 6rem;
+  align-items: start;
+}
+
+.credibility-strip {
+  background: var(--klmc-green);
+  color: white;
+  padding: 1.8rem 0;
+  text-align: center;
+}
+
+.credibility-strip p {
+  margin: 0;
+  font-size: 1.05rem;
+  letter-spacing: 0.02em;
+}
+
+.doctor-grid {
+  display: grid;
+  grid-template-columns: 1.1fr 0.9fr;
+  gap: 5rem;
+  align-items: center;
+}
+
+.doctor-image-wrap {
+  display: flex;
+  justify-content: center;
+}
+
+.doctor-image-placeholder {
+  width: 100%;
+  max-width: 580px;
+  aspect-ratio: 4 / 5;
+  background: #e9ddd4;
+  color: var(--klmc-muted);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 1.35rem;
+}
+
+.video-link {
+  margin-top: 1.5rem;
+  color: var(--klmc-peach);
+}
+
+@media (max-width: 1100px) {
+  .two-col,
+  .doctor-grid {
+    grid-template-columns: 1fr;
+  }
+}
+
+@media (max-width: 768px) {
+  .container {
+    width: min(100% - 2rem, 1280px);
+  }
+
+  .section-title {
+    font-size: 3rem;
+  }
+
+  .section-block p,
+  .section-block li {
+    font-size: 1.08rem;
+    line-height: 1.8;
+  }
+
+  .section-block h3 {
+    font-size: 1.5rem;
+  }
+
+  .quote-line {
+    font-size: 1.5rem;
+  }
 }

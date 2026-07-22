@@ -6,13 +6,14 @@
 
     <nav class="main-nav">
       <a routerLink="/" routerLinkActive="active" [routerLinkActiveOptions]="{ exact: true }">Home</a>
-      <a routerLink="/services" routerLinkActive="active">Programmes</a>
-      <a routerLink="/about" routerLinkActive="active">Your Doctor</a>
+      <a routerLink="/about" routerLinkActive="active">About</a>
+      <a routerLink="/clinics-bookings" routerLinkActive="active">Clinics &amp; Bookings</a>
+      <a routerLink="/services" routerLinkActive="active">Services</a>
       <a routerLink="/contact" routerLinkActive="active">Contact</a>
     </nav>
 
     <div class="header-actions">
-      <a class="book-btn" href="#">Book Appointment</a>
+      <button class="book-btn" type="button" (click)="bookingService.open()">Book Appointment</button>
     </div>
   </div>
 </header>

@@ -71,6 +71,9 @@
   font-weight: 600;
   letter-spacing: 0.02em;
   white-space: nowrap;
+  border: none;
+  font-family: inherit;
+  cursor: pointer;
 }
 
 .book-btn:hover {

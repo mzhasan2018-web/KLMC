@@ -3,6 +3,7 @@ import { RouterOutlet } from '@angular/router';
 import { TopbarComponent } from './core/components/topbar/topbar';
 import { HeaderComponent } from './core/components/header/header';
 import { FooterComponent } from './core/components/footer/footer';
+import { BookConsultationModalComponent } from './shared/components/book-consultation-modal/book-consultation-modal';
 
 @Component({
   selector: 'app-root',
@@ -11,7 +12,8 @@ import { FooterComponent } from './core/components/footer/footer';
     RouterOutlet,
     TopbarComponent,
     HeaderComponent,
-    FooterComponent
+    FooterComponent,
+    BookConsultationModalComponent
   ],
   templateUrl: './app.html',
   styleUrl: './app.scss'

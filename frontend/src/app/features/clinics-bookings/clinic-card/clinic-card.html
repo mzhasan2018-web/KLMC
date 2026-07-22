@@ -1,0 +1,38 @@
+<article class="clinic-card">
+  <h3>{{ clinic.name }}</h3>
+
+  @if (clinic.formerlyKnownAs) {
+    <p class="clinic-subtitle">Formerly {{ clinic.formerlyKnownAs }}</p>
+  }
+
+  <dl class="clinic-details">
+    <div>
+      <dt>Location</dt>
+      <dd>{{ clinic.location }}</dd>
+    </div>
+    <div>
+      <dt>Who it&rsquo;s for</dt>
+      <dd>{{ clinic.whoItsFor }}</dd>
+    </div>
+    <div>
+      <dt>Appointment type</dt>
+      <dd>{{ clinic.appointmentType }}</dd>
+    </div>
+    @if (clinic.contact) {
+      <div>
+        <dt>Contact</dt>
+        <dd>{{ clinic.contact }}</dd>
+      </div>
+    }
+    <div>
+      <dt>Fees</dt>
+      <dd>{{ clinic.fees }}</dd>
+    </div>
+  </dl>
+
+  @if (clinic.bookingUrl) {
+    <a class="btn-klmc" [href]="clinic.bookingUrl" target="_blank" rel="noopener">Book Appointment</a>
+  } @else {
+    <a class="btn-klmc secondary" routerLink="/contact">Get in Touch</a>
+  }
+</article>
